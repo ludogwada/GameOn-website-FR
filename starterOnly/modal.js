@@ -13,10 +13,11 @@ const modalBtn = document.querySelectorAll('.modal-btn');
 const formData = document.querySelectorAll('.formData');
 const closeBtn = document.getElementsByClassName('close');
 const form = document.getElementsByName('formModal');
+const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
 const firstName = document.getElementById('first');
 const lastName = document.getElementById('last');
 const email = document.getElementById('email');
-const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
+const quantity = document.getElementById('quantity');
 
 // ------ DISPLAY MODAL ------ //
 // LAUNCH MODAL EVENTS
@@ -31,45 +32,68 @@ function closeModal() {
 }
 closeBtn[0].addEventListener('click', closeModal);
 
+//validtion formulaire
+
+formModal.addEventListener('submit', function(){ 
+  validForm(this);
+})
+  function validForm(e){
+  e.preventDefault();
+  } 
 
 //FIRST NAME
 firstName.addEventListener('change', function(){
   checkFirst(this);
 })
- const checkFirst = function inputFirstName(){
-  if (firstName.value.trim().length < 2 || first.value.trim() === '' || !firstName.value.match(regex)) {
-    first.parentElement.setAttribute('data-error-visible', 'true');
+function checkFirst(e) {
+  if (firstName.value.trim().length < 2 || firstName.value.trim() === '' || !firstName.value.match(regex)) {
+    firstName.parentElement.setAttribute('data-error-visible', 'true');
     return false;
   }
-    first.parentElement.setAttribute('data-error-visible', 'false');
-    return true;
+  firstName.parentElement.setAttribute('data-error-visible', 'false');
+  return true;
 }
 
 //LASTNAME
 lastName.addEventListener('change', function(){
   checkLast(this);
 })
-const checkLast = function inputLastName(){
-  if (lastName.value.trim().lenght < 2 || lastName.value.trim() === '' || !lastName.value.match(regex)) {
-    last.parentElement.setAttribute('data-error-visible', 'true');
+function checkLast() {
+  if (lastName.value.trim().length < 2 || last.value.trim() === '' || !lastName.value.match(regex)) {
+    lastName.parentElement.setAttribute('data-error-visible', 'true');
     return false;
   }
-    last.parentElement.setAttribute('data-error-visible', 'false');
-    return true;
+  lastName.parentElement.setAttribute('data-error-visible', 'false');
+  return true;
 }
-
 
 //EMAIL
-email.addEventListener('change',function(){
+email.addEventListener('change', function(){
   checkEmail(this);
 })
-const checkEmail = function inputEmail (){   
+function checkEmail() {
   const RegExp = '^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$';
-  
-  if (email.value.trim().match(RegExp)){
+
+  if (email.value.trim().match(RegExp)) {
     email.parentElement.setAttribute('data-error-visible', 'false');
     return true;
-    }
-    email.parentElement.setAttribute('data-error-visible', 'true');
-    return false;
+  }
+  email.parentElement.setAttribute('data-error-visible', 'true');
+  return false;
 }
+
+//TOURNAMENTS
+quantity.addEventListener('change', function(){
+  checkQuantity(this);
+})
+function checkQuantity() {
+  if (quantity.value().length != 0 || isNaN(quantity.value()) === false || quantity.value() > 0) {
+    quantity.parentElement.setAttribute('data-error-visible', 'false');
+    return true;
+  }
+  quantity.parentElement.setAttribute('data-error-visible', 'true');
+  return false;
+}
+
+
+
