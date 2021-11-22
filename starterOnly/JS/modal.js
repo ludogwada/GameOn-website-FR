@@ -15,6 +15,7 @@ const birthdate = document.getElementById('birthdate');
 const quantity = document.getElementById('quantity');
 const allLocations = document.getElementById('allLocations');
 const locations = document.querySelectorAll('#allLocations .checkbox-input');
+const termOfUse = document.getElementById('termOfUse')
 
 
 // ------ DISPLAY MODAL ------ //
@@ -98,7 +99,7 @@ function checkQuantity() {
 
 //LOCATIONS
 allLocations.addEventListener('change', function() {
-  checkLocations();
+  checkLocations(this);
 })
 function checkLocations() {
   allLocations.setAttribute('data-error-visible', 'true');
@@ -109,6 +110,18 @@ function checkLocations() {
       }
   }
   return false;
-
-
 }
+
+//TERMS OF USE
+termOfUse.addEventListener('change', function() {
+  checkTermOfUse(this);
+})
+function checkTermOfUse() {
+  termOfUse.parentElement.setAttribute('data-error-visible', 'true');
+    if (termOfUse.checked) {
+      termOfUse.parentElement.setAttribute('data-error-visible', 'false');
+      return true
+    }
+    return false;
+}
+
