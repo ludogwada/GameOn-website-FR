@@ -5,7 +5,7 @@ const modalbg = document.querySelector('.bground');
 const modalBtn = document.querySelectorAll('.modal-btn');
 const formData = document.querySelectorAll('.formData');
 const closeBtn = document.getElementsByClassName('close');
-const form = document.getElementsByName('formModal');
+const form = document.getElementById('formModal');
 const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
 const firstName = document.getElementById('first');
 const lastName = document.getElementById('last');
@@ -14,7 +14,7 @@ const RegExp = '^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$';
 const birthdate = document.getElementById('birthdate');
 const quantity = document.getElementById('quantity');
 const allLocations = document.getElementById('allLocations');
-const locations = document.querySelectorAll('#allLocations .checkbox-input');
+const locations = document.getElementsByName('location');
 const termOfUse = document.getElementById('termOfUse')
 
 
@@ -102,14 +102,14 @@ allLocations.addEventListener('change', function() {
   checkLocations(this);
 })
 function checkLocations() {
-  allLocations.setAttribute('data-error-visible', 'true');
-  for (let i = 0; i < locations.length; i++) {
+    for( let i = 0 ; i < locations.length; i++)
       if (locations[i].checked) {
           allLocations.setAttribute('data-error-visible', 'false');
           return true;
+      } else {
+        allLocations.setAttribute('data-error-visible', 'true');
       }
-  }
-  return false;
+    return false;
 }
 
 //TERMS OF USE
@@ -125,3 +125,17 @@ function checkTermOfUse() {
     return false;
 }
 
+//SUBMIT FORM
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  if (checkFirst(firstName) 
+      && checkLast(lastName)
+      && checkEmail(email) 
+      && checkBirthdate(birthdate) 
+      && checkQuantity(quantity) 
+      && checkLocations(allLocations) 
+      && checkTermOfUse(termOfUse)){
+        form.submit();
+      }
+      
+});
