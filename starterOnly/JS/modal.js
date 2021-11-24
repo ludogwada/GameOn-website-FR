@@ -6,6 +6,8 @@ const modalBtn = document.querySelectorAll('.modal-btn');
 const formData = document.querySelectorAll('.formData');
 const closeBtn = document.getElementsByClassName('close');
 const form = document.getElementById('formModal');
+const modalTh = document.querySelector('#thanks');
+const closeBtnTh = document.querySelector('.btn-closeModal');
 const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
 const firstName = document.getElementById('first');
 const lastName = document.getElementById('last');
@@ -16,8 +18,7 @@ const quantity = document.getElementById('quantity');
 const allLocations = document.getElementById('allLocations');
 const locations = document.getElementsByName('location');
 const termOfUse = document.getElementById('termOfUse');
-const modalTh = document.querySelector('#thanks');
-const closeBtnTh = document.querySelector('.btn-closeModal');
+
 
 // ------ DISPLAY MODAL ------ //
 // LAUNCH MODAL EVENTS
@@ -47,6 +48,7 @@ closeBtnTh.addEventListener('click',closeModalTh);
 function closeModalTh() {
     modalTh.style.display = 'none';
     modalbg.style.display = 'none';
+    document.location.reload();
 }
 
 
@@ -146,26 +148,25 @@ function checkTermOfUse() {
 //SUBMIT FORM
 form.addEventListener('submit', function(e) {
   e.preventDefault();
- /* checkFirst();
+  checkFirst();
   checkLast();
   checkEmail();
   checkBirthdate();
   checkQuantity();
-  checkLocations();*/
+  checkLocations();
   checkTermOfUse();
   if (
-     /* checkFirst(firstName) && 
+      checkFirst(firstName) && 
       checkLast(lastName) &&
       checkEmail(email) &&
       checkBirthdate(birthdate) &&
       checkQuantity(quantity) &&
-      checkLocations(allLocations) &&*/  
+      checkLocations(allLocations) &&
       checkTermOfUse(termOfUse)) {
         form.style.display ='none';
         modalTh.style.display ='block';
       } else {
           modalTh.style.display ='none';
       }
-
 });
 
