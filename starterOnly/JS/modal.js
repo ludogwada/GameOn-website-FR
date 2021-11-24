@@ -15,8 +15,9 @@ const birthdate = document.getElementById('birthdate');
 const quantity = document.getElementById('quantity');
 const allLocations = document.getElementById('allLocations');
 const locations = document.getElementsByName('location');
-const termOfUse = document.getElementById('termOfUse')
-
+const termOfUse = document.getElementById('termOfUse');
+const modalTh = document.querySelector('#thanks');
+const closeBtnTh = document.querySelector('.btn-closeModal');
 
 // ------ DISPLAY MODAL ------ //
 // LAUNCH MODAL EVENTS
@@ -25,11 +26,28 @@ modalBtn.forEach((btn) => btn.addEventListener('click', launchModal));
 function launchModal() {
   modalbg.style.display = 'block';
 }
-// CLOSE MODAL FORM
+// CLOSE MODAL FORM CROSS
+closeBtn [0].addEventListener('click', closeModal);
 function closeModal() {
   modalbg.style.display = 'none';
+  modalTh.style.display = 'none';
+  document.location.reload();
 }
-closeBtn[0].addEventListener('click', closeModal);
+//--------THANKS MODAL---------//
+//LAUNCH MODAL
+
+function launchModalTh() {
+  modalTh.style.display = 'block';
+}
+//CLOSE CROSS 
+closeBtn [1].addEventListener('click', closeModal);
+
+//CLOSE MODAL 
+closeBtnTh.addEventListener('click',closeModalTh);
+function closeModalTh() {
+    modalTh.style.display = 'none';
+    modalbg.style.display = 'none';
+}
 
 
 //FIRST NAME
@@ -128,14 +146,26 @@ function checkTermOfUse() {
 //SUBMIT FORM
 form.addEventListener('submit', function(e) {
   e.preventDefault();
-  if (checkFirst(firstName) 
-      && checkLast(lastName)
-      && checkEmail(email) 
-      && checkBirthdate(birthdate) 
-      && checkQuantity(quantity) 
-      && checkLocations(allLocations) 
-      && checkTermOfUse(termOfUse)){
-        form.submit();
+ /* checkFirst();
+  checkLast();
+  checkEmail();
+  checkBirthdate();
+  checkQuantity();
+  checkLocations();*/
+  checkTermOfUse();
+  if (
+     /* checkFirst(firstName) && 
+      checkLast(lastName) &&
+      checkEmail(email) &&
+      checkBirthdate(birthdate) &&
+      checkQuantity(quantity) &&
+      checkLocations(allLocations) &&*/  
+      checkTermOfUse(termOfUse)) {
+        form.style.display ='none';
+        modalTh.style.display ='block';
+      } else {
+          modalTh.style.display ='none';
       }
-      
+
 });
+
