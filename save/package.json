@@ -1,0 +1,11 @@
+{
+  "name": "starteronly",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "sass": "^1.43.5"
+  }
+}

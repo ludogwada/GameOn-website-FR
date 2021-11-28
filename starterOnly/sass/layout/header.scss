@@ -1,0 +1,14 @@
+
+header {
+    width: 97%;
+}
+.header-logo {
+    float: left;
+}
+@media screen and (max-width: 600px) {
+    header{
+      z-index: 2;
+      background-color: #ffffff;
+      width: 100%;
+    }
+  }  

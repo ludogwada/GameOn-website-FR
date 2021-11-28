@@ -1,0 +1,108 @@
+.modal-btn {
+    font-size: 145%;
+    background: #fe142f;
+    display: flex;
+    margin: auto;
+    padding: 2em;
+    color: #fff;
+    padding: 0.75rem 2.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  
+  .modal-btn:hover {
+    background: #3876ac;
+  }
+  .button {
+    background: #fe142f;
+    margin-top: 0.5em;
+    padding: 1em;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .button:hover {
+    background: #3876ac;
+  }
+  .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(0.7);
+  }
+  .close:before,
+  .close:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 33px;
+    width: 3px;
+    background-color: #fff;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  .btn-submit,
+  .btn-signup,
+  .btn-closeModal {
+    background: #fe142f;
+    display: block;
+    margin: 0 auto;
+    border-radius: 7px;
+    font-size: 1rem;
+    padding: 12px 82px;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+  }
+  .btn-signup {
+    outline: none;
+    font-size: 1.3rem;
+    padding: 15px 23px;
+    margin-left: 0;
+    margin-top: 100px;
+  }
+
+@media screen and (max-width: 1038px){
+  .btn-signup{
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 942px){
+  .btn-signup{
+    margin-top: 50px;
+  }
+}
+  .hero-section > .btn-signup {
+    display: none;
+  }
+@media screen and (max-width: 920px) {
+  .hero-section > .btn-signup {
+    display: block;
+    margin: 32px auto 10px;
+    padding: 6px 20px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 454px) {
+  .hero-section > .btn-signup {
+    font-size: 14px;
+  }
+} 
+@media screen and (max-width: 340px) {
+  .hero-section > .btn-signup {
+    margin-top: 20px;
+  }
+}
+  .btn-closeModal {
+    margin-top: 140%;
+  }
