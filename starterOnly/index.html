@@ -15,18 +15,19 @@
     <header>
       <div class="topnav" id="myTopnav">
         <div class="header-logo">
-        <img alt="logo" src="Logo.png" width="auto" height="auto" />
-      </div>
+        <img alt="logo" src="Logo.png"/>
+        </div>
         <div class="main-navbar">
-        <a href="#" class="active"><span>Accueil</span></a>
-        <a href="#"><span>Détails de l'évènement</span></a>
-        <a href="#"><span>À propos</span></a>
-        <a href="#"><span>Contact</span></a>
-        <a href="#"><span>Évènements passés</span></a>
-        <a href="javascript:void(0);" class="icon" onclick="editNav()">
-          <i class="fa fa-bars"></i>
-        </a>
-    </div>
+         <a href="#" class="active"><span>Accueil</span></a>
+         <a href="#"><span>Détails de l'évènement</span></a>
+         <a href="#"><span>À propos</span></a>
+         <a href="#"><span>Contact</span></a>
+          <a href="#"><span>Évènements passés</span></a>
+          <a href="javascript:void(0);" class="icon" onclick="editNav()">
+            <i class="fa fa-bars"></i>
+         </a>
+       </div>
+     </div>
     </header>
     <main>
       <div class="hero-section">
@@ -53,23 +54,23 @@
       <div class="bground">
         <div class="content">
           <div class="modal-body">
-            <form id="formModal"action="index.html"method="get">
+            <form id="formModal" action="index.html" method="get">
               <span class="close"></span>
               <div class="formData" data-error="Veuillez entrer votre prénom." data-error-visible="false">
                 <label for="first">Prénom</label>
-                <input class="text-control"type="text"id="first"name="first"/>
+                <input class="text-control" type="text" id="first" name="first"/>
               </div>
               <div class="formData" data-error="Veuillez entrer votre nom." data-error-visible="false">
                 <label for="last">Nom</label>
-                <input class="text-control"type="text"id="last"name="last"/>
+                <input class="text-control" type="text" id="last" name="last"/>
               </div>
             <div class="formData" data-error="Veuillez entrer votre adresse email." data-error-visible="false">
-                <label for="email">E-mail</label>
-                <input class="text-control"type="email"id="email"name="email"/>
+                <label for="email">E-mail</label> 
+                <input class="text-control" type="email" id="email" name="email"/>
               </div>
               <div class="formData" data-error="Veuillez entrer votre date de naissance." data-error-visible="false">
                 <label for="birthdate">Date de naissance</label>
-                <input class="text-control"type="date"id="birthdate"name="birthdate"/>
+                <input class="text-control" type="date" id="birthdate" name="birthdate"/>
               </div>
               <div class="formData" data-error="Veuillez saisir un nombre." data-error-visible="false">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label>
@@ -77,33 +78,33 @@
               </div>
               <p class="text-label">Quelles villes ?</p>
               <div class="formData" id="allLocations" data-error="Veuillez sélectionner une ville." data-error-visible="false">
-                <input class="checkbox-input"type="radio" id="location1"name="location"value="New York"/>
+                <input class="checkbox-input" type="radio" id="location1" name="location" value="New York"/>
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
                   New York</label>
-                <input class="checkbox-input"type="radio" id="location2"name="location"value="San Francisco"/>
+                <input class="checkbox-input" type="radio" id="location2" name="location" value="San Francisco"/>
                 <label class="checkbox-label" for="location2">
                   <span class="checkbox-icon"></span>
                   San Francisco</label>
-                <input class="checkbox-input"type="radio" id="location3"name="location"value="Seattle"/>
+                <input class="checkbox-input" type="radio" id="location3" name="location" value="Seattle"/>
                 <label class="checkbox-label" for="location3">
                   <span class="checkbox-icon"></span>
                   Seattle</label>
-                <input class="checkbox-input"type="radio" id="location4"name="location"value="Chicago"/>
+                <input class="checkbox-input" type="radio" id="location4" name="location" value="Chicago"/>
                 <label class="checkbox-label" for="location4">
                   <span class="checkbox-icon"></span>
                   Chicago</label>
-                <input class="checkbox-input"type="radio" id="location5"name="location"value="Boston"/>
+                <input class="checkbox-input" type="radio" id="location5" name="location" value="Boston"/>
                 <label class="checkbox-label" for="location5">
                   <span class="checkbox-icon"></span>
                   Boston</label>
-                <input class="checkbox-input"type="radio" id="location6"name="location"value="Portland"/>
+                <input class="checkbox-input" type="radio" id="location6" name="location" value="Portland"/>
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>
                   Portland</label>
               </div>
-              <div class="formData" data-error="Vous devez accepter les conditions d'utilisation."data-error-visible="false">
-                <input class="checkbox-input"type="checkbox"id="termOfUse"/>
+              <div class="formData" data-error="Vous devez accepter les conditions d'utilisation." data-error-visible="false">
+                <input class="checkbox-input" type="checkbox" id="termOfUse"/>
                 <label class="checkbox2-label" for="termOfUse">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
@@ -114,7 +115,7 @@
                   Je souhaite être prévenu des prochains évènements.
                 </label>
               </div>
-              <input class="btn-submit button thanks-display"type="submit"value="C'est parti"/>
+              <input class="btn-submit button thanks-display" type="submit" value="C'est parti"/>
             </form>
             <div id="thanks">
               <div class="thanks-modal">
@@ -126,7 +127,6 @@
           </div>
         </div>
         </div>
-      </div>
       </div>
     </main>
     <footer>

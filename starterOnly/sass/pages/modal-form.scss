@@ -30,14 +30,7 @@
     position: relative;
     color: #fff;
   }
-  @media screen and (max-width: 600px) {
-    .content{
-      margin-top: 70px;
-      margin: 0;
-      max-width: 600px;
-      height: 100%;
-    }
-  }
+  
   .modal-body {
     padding: 15px 8%;
     margin: 15px auto;
@@ -139,8 +132,8 @@
     background: #c4c4c4;
   }
   .checkbox2-label .checkbox-icon::after {
-    width: 7px;
-    height: 4px;
+    width: 11px;
+    height: 8px;
     border-radius: 2px;
     background: transparent;
     border: 2px solid transparent;
@@ -149,4 +142,29 @@
     transform: rotate(-55deg);
     left: 21%;
     top: 19%;
+  }
+  @media screen and (max-width: 600px) {
+    .bground{
+      top: unset;
+      height: 90%;
+      background-color: unset;
+    }
+    .content{
+      margin-top: 70px;
+      margin: 0;
+      max-width: 600px;
+      height: 100%;
+    }
+    .formData{
+      font-size: 12px;
+    }
+    label{
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .text-control{
+      height: 38px;
+      font-size: 16px;
+      padding: 5px;
+    }
   }

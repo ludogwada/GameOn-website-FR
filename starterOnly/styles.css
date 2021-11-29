@@ -106,7 +106,7 @@ td, th {
 .btn-closeModal {
   background: #fe142f;
   display: block;
-  margin: 0 auto;
+  margin: 0px auto;
   border-radius: 7px;
   font-size: 1rem;
   padding: 12px 82px;
@@ -148,6 +148,10 @@ td, th {
 @media screen and (max-width: 454px) {
   .hero-section > .btn-signup {
     font-size: 14px;
+  }
+
+  .btn-submit, .btn-closeModal {
+    padding: 8px 40px;
   }
 }
 @media screen and (max-width: 340px) {
@@ -224,7 +228,7 @@ td, th {
 }
 @media screen and (max-width: 600px) {
   .topnav a {
-    padding: 8px 8px;
+    padding: 6px 6px;
   }
 }
 footer {
@@ -276,6 +280,10 @@ header {
     z-index: 2;
     background-color: #ffffff;
     width: 100%;
+  }
+
+  .header-logo {
+    margin-top: 5px;
   }
 }
 :root {
@@ -522,14 +530,6 @@ main {
   color: #fff;
 }
 
-@media screen and (max-width: 600px) {
-  .content {
-    margin-top: 70px;
-    margin: 0;
-    max-width: 600px;
-    height: 100%;
-  }
-}
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
@@ -644,8 +644,8 @@ input[data-error]::after {
 }
 
 .checkbox2-label .checkbox-icon::after {
-  width: 7px;
-  height: 4px;
+  width: 11px;
+  height: 8px;
   border-radius: 2px;
   background: transparent;
   border: 2px solid transparent;
@@ -656,6 +656,35 @@ input[data-error]::after {
   top: 19%;
 }
 
+@media screen and (max-width: 600px) {
+  .bground {
+    top: unset;
+    height: 90%;
+    background-color: unset;
+  }
+
+  .content {
+    margin-top: 70px;
+    margin: 0;
+    max-width: 600px;
+    height: 100%;
+  }
+
+  .formData {
+    font-size: 12px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .text-control {
+    height: 38px;
+    font-size: 16px;
+    padding: 5px;
+  }
+}
 #thanks {
   display: none;
   width: 100%;
@@ -770,8 +799,5 @@ input[data-error]::after {
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
-
-/* RESPONSIVE*/
-/*ANIMATIONS*/
 
 /*# sourceMappingURL=styles.css.map */
